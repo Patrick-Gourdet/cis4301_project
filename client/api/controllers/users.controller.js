@@ -42,13 +42,20 @@ oracledb.getConnection(connectionInfo,
           res.send(JSON.stringify(result.rows));
         //The commented out is a basic way recomended is bu use of the getRow or getRows function call below
       }
+      connection.release((err)=>{
+        if(err){
+          console.log(err.message);
+        }else {
+          console.log("GET /profiels : Connection Released");
+        }
+      })
 
-        doRelease(connection);
       });
   });
 
 
-}
+};
+
 module.exports.usersGetOne =function(req,res){
 "use strict"
 oracledb.getConnection(connectionInfo,
