@@ -1,10 +1,28 @@
 <div class="container">
+  <div style="text-align:center;padding-top: 50px">
+
+    <img width="300" alt="Angular Logo" src="../assets/kickstarterana-cropped.jpg">
+  </div>
+  <hr>
 <div class="row">
   <div class="col-xs-12">
-    <h1>If all went well you will see users data from your database here</h1>
-<h1> {{users}}</h1>
-  </div>
-</div>
 
+    <h1>If all went well you will see users data from your database here</h1>
+    <hr>
+    <ul class="list-group">
+    <li class="list-group-item">
+<h4>
+  <div *ngFor="let u  of users">
+    <p class="un">User Name: {{u[0]}}</p>
+  <hr>
+    <p>First Name: {{u[1]}}</p><hr>
+    <p>Last Name: {{u[2]}}</p><hr>
+    <p>Address: {{u[8]}}</p>
+  </div>
+</h4>
+    </li>
+    </ul>
+</div>
+</div>
 
 </div>

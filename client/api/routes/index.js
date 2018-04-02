@@ -5,7 +5,7 @@ var userCtrl = require('../controllers/users.controller.js');
 
 /* GET home page. */
 router
-  .route('/home')
+  .route('home')
   .get(function(req, res, next) {
   res.json({message: 'You are home' });
 });

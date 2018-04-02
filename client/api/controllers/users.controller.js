@@ -4,8 +4,8 @@
 */
 
 connectionInfo = require('../cred');
-var oracledb = require('oracledb');
-
+let oracledb = require('oracledb');
+oracledb.outFormat = oracledb.ARRAY;
 //GET ALL LISTED USERS
 module.exports.usersGetAll =function(req,res){
 "use strict"
@@ -23,7 +23,7 @@ oracledb.getConnection(connectionInfo,
     }
     connection.execute(
       `SELECT * FROM USERS`,{},{
-        outFormat: oracledb.OBJECT
+        outFormat: oracledb.ARRAY
       },
       // Outputs a oracledb object
       function(err, result)

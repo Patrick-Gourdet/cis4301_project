@@ -5,7 +5,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var app = express();
 
-var routes = require('./api/routes');
+var routes = require('./api/routes/index');
 
 app.set('port',3000);
 app.use(function(req,res,next){
@@ -16,9 +16,11 @@ app.use(function(req,res,next){
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
+ app.use(express.static(path.join(__dirname, 'dist')));
+ app.use('/api',express.static(path.join(__dirname, 'dist')));
+// app.use('',express.static(path.join(__dirname, 'dist')));
 
-app.use('/api',express.static(path.join(__dirname, 'dist')));
-app.use(express.static(path.join(__dirname, 'dist')));
+
 app.use('/node_modules',express.static(__dirname + '/node_modules'));
 app.use('/bower_components',express.static(__dirname + '/bower_components'));
 app.use(bodyParser.urlencoded({extended : false}));

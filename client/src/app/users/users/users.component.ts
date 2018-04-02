@@ -11,8 +11,8 @@ export class UsersComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('/api/profiles').subscribe(data =>{
-      this.users = data;
+    this.http.get('api/profiles').subscribe(data => {
+       this.users = data;
     })
   }
 

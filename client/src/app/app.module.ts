@@ -6,22 +6,28 @@ import {RouterModule, Routes} from "@angular/router";
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users/users.component';
 import { HomeComponent } from './home/home.component';
+import {HeaderComponent} from "./header/header.component";
 
 const appRoutes: Routes=[
-  {path: '', component: UsersComponent},
- //  {path: '/', component: HomeComponent}
+
+  {path: 'profile', component: UsersComponent},
+  {path: '', redirectTo: '/profile',pathMatch: 'full'},
+  {path: 'home-page', component: HomeComponent},
+
 ]
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
