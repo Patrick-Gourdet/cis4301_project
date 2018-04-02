@@ -1,5 +1,5 @@
-var userName = "pgourdet";
-var passWord = "!Inf1n1ty9";
+var userName = "";
+var passWord = "";
 connectionInfo =   {
   user          : userName,
   password      : passWord,

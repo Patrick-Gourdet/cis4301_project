@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5222dbce-83d7-4531-97ba-f8b5b0fdf350" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/app/header/header.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/app/header/header.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/app/header/header.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/app/header/header.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/kickstarterana-cropped.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/kickstarterana.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/top.jpg" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/client/.angular-cli.json" afterPath="$PROJECT_DIR$/client/.angular-cli.json" />
-      <change beforePath="$PROJECT_DIR$/client/api/controllers/users.controller.js" afterPath="$PROJECT_DIR$/client/api/controllers/users.controller.js" />
       <change beforePath="$PROJECT_DIR$/client/api/cred.js" afterPath="$PROJECT_DIR$/client/api/cred.js" />
-      <change beforePath="$PROJECT_DIR$/client/api/routes/index.js" afterPath="$PROJECT_DIR$/client/api/routes/index.js" />
-      <change beforePath="$PROJECT_DIR$/client/app.js" afterPath="$PROJECT_DIR$/client/app.js" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.html" afterPath="$PROJECT_DIR$/client/src/app/app.component.html" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/home/home.component.html" afterPath="$PROJECT_DIR$/client/src/app/home/home.component.html" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/users/users/users.component.css" afterPath="$PROJECT_DIR$/client/src/app/users/users/users.component.css" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/users/users/users.component.html" afterPath="$PROJECT_DIR$/client/src/app/users/users/users.component.html" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/users/users/users.component.ts" afterPath="$PROJECT_DIR$/client/src/app/users/users/users.component.ts" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.html" afterPath="$PROJECT_DIR$/client/src/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,6 +16,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="cred.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/api/cred.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,16 +90,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="9200" column="50" lean-forward="false" selection-start-line="9200" selection-start-column="47" selection-end-line="9200" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name=".angular-cli.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/.angular-cli.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -131,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.component.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users.component.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/app/users/users/users.component.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -158,7 +139,6 @@
       <list>
         <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/client/bin/www.js" />
-        <option value="$PROJECT_DIR$/client/api/cred.js" />
         <option value="$PROJECT_DIR$/client/api/routes/index.js" />
         <option value="$PROJECT_DIR$/client/src/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/users/users/users.component.ts" />
@@ -172,6 +152,7 @@
         <option value="$PROJECT_DIR$/client/src/app/header/header.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/users/users/users.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/users/users/users.component.css" />
+        <option value="$PROJECT_DIR$/client/api/cred.js" />
       </list>
     </option>
   </component>
@@ -216,6 +197,19 @@
               <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
@@ -317,15 +311,16 @@
       <updated>1522058835245</updated>
       <workItem from="1522058837447" duration="18353000" />
       <workItem from="1522279708040" duration="8622000" />
-      <workItem from="1522599194030" duration="16838000" />
+      <workItem from="1522599194030" duration="17407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43813000" />
+    <option name="totallyTimeSpent" value="44382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1352" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2872024" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -335,7 +330,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14770798" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14770798" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -559,14 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/api/cred.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/api/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -694,6 +681,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="78" lean-forward="false" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/api/cred.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding />
         </state>
       </provider>
