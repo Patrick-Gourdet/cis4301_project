@@ -12,9 +12,10 @@ import { SignupComponent } from './signup/signup.component';
 
 const appRoutes: Routes=[
 
-  {path: 'profile', component: HomeComponent},
-  {path: '', redirectTo: '/profile',pathMatch: 'full'},
-  {path: 'home-page', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: '/home',pathMatch: 'full'},
+  {path: 'signin', component: SigninComponent},
+  {path: 'signup', component: SignupComponent},
 
 ]
 @NgModule({
