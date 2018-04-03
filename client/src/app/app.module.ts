@@ -12,7 +12,7 @@ import { SignupComponent } from './signup/signup.component';
 
 const appRoutes: Routes=[
 
-  {path: 'profile', component: UsersComponent},
+  {path: 'profile', component: HomeComponent},
   {path: '', redirectTo: '/profile',pathMatch: 'full'},
   {path: 'home-page', component: HomeComponent},
 
