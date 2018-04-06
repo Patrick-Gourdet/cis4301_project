@@ -7,12 +7,17 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users/users.component';
 import { HomeComponent } from './home/home.component';
 import {HeaderComponent} from "./header/header.component";
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import { PopulartrendsComponent } from './populartrends/populartrends.component';
 
 const appRoutes: Routes=[
 
-  {path: 'profile', component: UsersComponent},
-  {path: '', redirectTo: '/profile',pathMatch: 'full'},
-  {path: 'home-page', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: '/home',pathMatch: 'full'},
+  {path: 'signin', component: SigninComponent},
+  {path: 'signup', component: SignupComponent},
+  {path: 'popular-trends', component: PopulartrendsComponent},
 
 ]
 @NgModule({
@@ -20,7 +25,10 @@ const appRoutes: Routes=[
     AppComponent,
     UsersComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SigninComponent,
+    SignupComponent,
+    PopulartrendsComponent
   ],
   imports: [
     BrowserModule,
