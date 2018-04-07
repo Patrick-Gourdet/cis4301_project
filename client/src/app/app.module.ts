@@ -11,10 +11,25 @@ import {HeaderComponent} from "./header/header.component";
 const appRoutes: Routes=[
 
   {path: 'profile', component: UsersComponent},
-  {path: '', redirectTo: '/profile',pathMatch: 'full'},
   {path: 'home-page', component: HomeComponent},
+  //{path: '', redirectTo: '/profile',pathMatch: 'full'},
 
-]
+
+];
+
+
+
+// const appRoutes: Routes = [
+//   {
+//     path: 'books',
+//     component: BookComponent,
+//     data: { title: 'Book List' }
+//   },
+//   { path: '',
+//     redirectTo: '/books',
+//     pathMatch: 'full'
+//   }
+// ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +42,7 @@ const appRoutes: Routes=[
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes
-    )
+      , { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
