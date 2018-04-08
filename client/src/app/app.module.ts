@@ -10,6 +10,8 @@ import {HeaderComponent} from "./header/header.component";
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { PopulartrendsComponent } from './populartrends/populartrends.component';
+import { ProfileComponent } from './profile/profile.component';
+import { HelpComponent } from './help/help.component';
 
 const appRoutes: Routes=[
 
@@ -18,6 +20,8 @@ const appRoutes: Routes=[
   {path: 'signin', component: SigninComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'popular-trends', component: PopulartrendsComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'help', component: HelpComponent},
 
 ]
 @NgModule({
@@ -28,7 +32,9 @@ const appRoutes: Routes=[
     HeaderComponent,
     SigninComponent,
     SignupComponent,
-    PopulartrendsComponent
+    PopulartrendsComponent,
+    ProfileComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
