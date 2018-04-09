@@ -5,6 +5,8 @@
 
 connectionInfo = require('../cred');
 let oracledb = require('oracledb');
+let bcrypt = require('bcryptjs');
+let jwt = require('jsonwebtoken');
 oracledb.outFormat = oracledb.ARRAY;
 //GET ALL LISTED USERS
 module.exports.usersGetAll =function(req,res){
@@ -89,6 +91,14 @@ oracledb.getConnection(connectionInfo,
 };
 module.exports.userRegister =function(req,res){
 "use strict"
+  if("application/json" !== req.get('Content-Type')){
+  res.set('Content-Type','application/json').status(415).send(JSON.stringify({
+    status: 415,
+    message: "Wrong content type. Only application/jason is supported",
+    detailed_message: null,
+  }));
+  return;
+  }
 oracledb.getConnection(connectionInfo,
   function(err, connection)
   {

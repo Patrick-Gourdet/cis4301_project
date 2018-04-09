@@ -17,19 +17,6 @@ const appRoutes: Routes=[
 
 ];
 
-
-
-// const appRoutes: Routes = [
-//   {
-//     path: 'books',
-//     component: BookComponent,
-//     data: { title: 'Book List' }
-//   },
-//   { path: '',
-//     redirectTo: '/books',
-//     pathMatch: 'full'
-//   }
-// ];
 @NgModule({
   declarations: [
     AppComponent,
