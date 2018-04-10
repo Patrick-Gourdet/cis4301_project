@@ -141,7 +141,39 @@ module.exports.userRegister =function(req,res){
 oracledb.getConnection(connectionInfo,
   function(err, connection)
   {
-
+    if (err) {
+      res.set('Content-Type','application/json');
+      res.status(500).send(JSON.stringify({
+        status: 500,
+        message: "Error connection to DB",
+        details: err.message
+      }));
+      return;
+    }
+    connection.execute("INSERT INTO USERS VALUES"+"(:USER_NAME,:DISPLAY_NAME,:DESCRIPTION, :GENDER,"+
+    ":AGE,:COUNTRY,:THEME)",[req.body.USER_NAME,],{
+      isAutoCommit: true,
+      outputFormate: oracledb.ARRAY
+    },
+      function(err,result){
+      if(err){
+        res.set('Content-Type','applicaton/json');
+        res.status(400).send(JSON.stringify({
+          status: 400,
+          message: err.message.indexOf("ORA-00001")>-1?"user already exists":"Input ERROR",
+          detailed_message: err.message
+        }));
+      }else{
+        res.status(201).set('Location','/user_profile/'+req.body.USER_NAME).end();
+      }
+        connection.release((err)=>{
+          if(err){
+            console.log(err.message);
+          }else {
+            console.log("CREATE USER /profiels : Connection Released");
+          }
+        })
+      })
 
     })
 };
