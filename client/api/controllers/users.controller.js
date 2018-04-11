@@ -121,7 +121,7 @@ module.exports.userEdit = function (req, res) {
 
     })
 };
-module.exports.userRegister = function (req, res) {
+module.exports.userRegister = async function (req, res) {
   "use strict"
   if ("application/json" !== req.get('Content-Type')) {
     res.set('Content-Type', 'application/json').status(415).send(JSON.stringify({
@@ -132,7 +132,7 @@ module.exports.userRegister = function (req, res) {
     return;
   }
   oracledb.getConnection(connectionInfo,
-    function (err, connection) {
+    await function (err, connection) {
       if (err) {
         res.set('Content-Type', 'application/json');
         res.status(500).send(JSON.stringify({
@@ -142,8 +142,9 @@ module.exports.userRegister = function (req, res) {
         }));
         return;
       }
-      connection.execute("INSERT INTO USERS VALUES" + "(:USER_ID,:PASSWORD,:, :GENDER," +
-        ":AGE,:COUNTRY,:THEME)", [req.body.USER_NAME,], {
+      connection.execute("INSERT INTO USERS VALUES" + "(:USER_ID,:PASSWORD,:DOB, :COUNTRY," +
+        ":FNAME,:LNAME)", [req.body.USER_ID,bcrypt.hashSync(req.body.PASSWORD, 10),req.body.DOB,req.body.COUNTRY,
+        req.body.FNAME,req.body.LNAME], {
           isAutoCommit: true,
           outputFormate: oracledb.ARRAY
         },
