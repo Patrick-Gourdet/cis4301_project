@@ -26,6 +26,7 @@
     "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
     "morgan": "^1.9.0",
     "oracledb": "github:oracle/node-oracledb#v2.1.2",
     "rxjs": "^5.5.6",

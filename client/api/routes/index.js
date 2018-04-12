@@ -11,11 +11,14 @@ router
 });
 
 router
-.route('/profiles')
-.get(userCtrl.usersGetAll);
+  .route('/profiles')
+  .get(userCtrl.usersGetAll);
 
 router
-.route('/profiles/:USER_NAME')
-.get(userCtrl.usersGetOne);
+  .route('/profiles/:USER_NAME')
+  .get(userCtrl.usersGetOne);
 
+router
+  .route('/add-profile')
+  .post(userCtrl.userRegister);
 module.exports = router;

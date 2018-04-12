@@ -7,22 +7,34 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users/users.component';
 import { HomeComponent } from './home/home.component';
 import {HeaderComponent} from "./header/header.component";
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import { PopulartrendsComponent } from './populartrends/populartrends.component';
+// import { ProfileComponent } from './profile/profile.component';
+import { HelpComponent } from './help/help.component';
 
 const appRoutes: Routes=[
 
-  {path: 'profile', component: UsersComponent},
-  {path: 'home-page', component: HomeComponent},
-  //{path: '', redirectTo: '/profile',pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
 
-
-];
-
+  {path: 'signin', component: SigninComponent},
+  {path: 'signup', component: SignupComponent},
+  {path: 'popular-trends', component: PopulartrendsComponent},
+  // {path: 'profile', component: ProfileComponent},
+  {path: 'help', component: HelpComponent},
+  {path: '', redirectTo: '/home',pathMatch: 'full'}
+]
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SigninComponent,
+    SignupComponent,
+    PopulartrendsComponent,
+    // ProfileComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,

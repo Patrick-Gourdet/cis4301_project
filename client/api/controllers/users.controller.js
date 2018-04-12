@@ -5,14 +5,14 @@
 
 connectionInfo = require('../cred');
 let oracledb = require('oracledb');
-let bcrypt = require('bcryptjs');
-let jwt = require('jsonwebtoken');
+let bcrypt = require('bcrypt');
+// let jwt = require('jsonwebtoken');
 oracledb.outFormat = oracledb.ARRAY;
 //GET ALL LISTED USERS
-module.exports.usersGetAll = function (req, res) {
+module.exports.usersGetAll = async function (req, res) {
   "use strict"
   oracledb.getConnection(connectionInfo,
-    function (err, connection) {
+   await function (err, connection) {
       if (err) {
         res.set('Content-Type', 'application/json');
         res.status(500).send(JSON.stringify({
@@ -23,7 +23,7 @@ module.exports.usersGetAll = function (req, res) {
         return;
       }
       connection.execute(
-        `SELECT * FROM USERS`, {}, {
+        `SELECT * FROM KS_USER`, {}, {
           outFormat: oracledb.ARRAY
         },
         // Outputs a oracledb object
@@ -122,15 +122,18 @@ module.exports.userEdit = function (req, res) {
     })
 };
 module.exports.userRegister = async function (req, res) {
+
+  req.body.PASSWORD = bcrypt.hashSync(req.body.PASSWORD, 10);
+  console.log(req.body.PASSWORD);
   "use strict"
-  if ("application/json" !== req.get('Content-Type')) {
-    res.set('Content-Type', 'application/json').status(415).send(JSON.stringify({
-      status: 415,
-      message: "Wrong content type. Only application/jason is supported",
-      detailed_message: null,
-    }));
-    return;
-  }
+  // if ("application/json" !== req.get('Content-Type')) {
+  //   res.set('Content-Type', 'application/json').status(415).send(JSON.stringify({
+  //     status: 415,
+  //     message: "Wrong content type. Only application/json is supported",
+  //     detailed_message: null,
+  //   }));
+  //   return;
+  // }
   oracledb.getConnection(connectionInfo,
     await function (err, connection) {
       if (err) {
@@ -142,11 +145,11 @@ module.exports.userRegister = async function (req, res) {
         }));
         return;
       }
-      connection.execute("INSERT INTO USERS VALUES" + "(:USER_ID,:PASSWORD,:DOB, :COUNTRY," +
-        ":FNAME,:LNAME)", [req.body.USER_ID,bcrypt.hashSync(req.body.PASSWORD, 10),req.body.DOB,req.body.COUNTRY,
+      connection.execute("INSERT INTO KS_USER VALUES " + "(:USER_ID,:PASSWORD, :COUNTRY," +
+        ":FNAME,:LNAME)", [req.body.USER_ID,req.body.PASSWORD,req.body.COUNTRY,
         req.body.FNAME,req.body.LNAME], {
-          isAutoCommit: true,
-          outputFormate: oracledb.ARRAY
+          autoCommit: true,
+          outputFormat: oracledb.ARRAY
         },
         function (err, result) {
           if (err) {
@@ -157,7 +160,7 @@ module.exports.userRegister = async function (req, res) {
               detailed_message: err.message
             }));
           } else {
-            res.status(201).set('Location', '/user_profile/' + req.body.USER_NAME).end();
+            res.status(201).set('Location', '#/user_profile/' + req.body.USER_ID).end();
           }
           connection.release((err) => {
             if (err) {
