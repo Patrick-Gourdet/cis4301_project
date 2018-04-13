@@ -1,10 +1,10 @@
 .background {
-  background-color: #C0C0C0;
+  background: radial-gradient(circle, white , darkgray );
   color: black;
   position: relative;
   bottom: 0px;
   right: 0px;
-  height: 2000px;
+  height: 1000px;
 }
 .button{
   color: #4CAF50;
@@ -14,7 +14,6 @@
   display: inline-block;
   font-size: 16px;
 }
-.container {
-  background: rgba(255,255,255,0.8);
-  padding: 20px;
+h3{
+  padding-top: 30px;
 }

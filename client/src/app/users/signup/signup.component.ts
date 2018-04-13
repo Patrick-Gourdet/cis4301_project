@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders,HttpParams } from '@angular/common/http';
+import {User} from "../user.model";
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -14,16 +15,15 @@ export class SignupComponent implements OnInit {
   dob: string;
   country: string;
   message: any;
-  user  = {USER_ID: '',PASSWORD: '',DOB: '',COUNTRY: '',FNAME: '',LNAME: ''};
+
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
   }
   addUser(){
-    this.user.FNAME = this.fname, this.user.LNAME = this.lname, this.user.PASSWORD = this.password
-    ,this.user.USER_ID = this.userid,this.user.COUNTRY = this.country, this.user.DOB = this.dob;
-    console.log(typeof JSON.stringify(this.user) + "THIS IS TYPE");
-    this.http.post('api/add-profile', this.user)
+    const user = new User(this.userid, this.password, this.country, this.fname, this.lname);
+
+    this.http.post('api/add-profile', user)
       .subscribe(res => {
           this.message = res;
           console.log(this.message);

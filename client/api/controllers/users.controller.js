@@ -6,15 +6,15 @@
 connectionInfo = require('../cred');
 let oracledb = require('oracledb');
 let bcrypt = require('bcrypt');
-// let jwt = require('jsonwebtoken');
+ let jwt = require('jsonwebtoken');
 oracledb.outFormat = oracledb.ARRAY;
 //GET ALL LISTED USERS
 module.exports.usersGetAll = async function (req, res) {
-  "use strict"
+  "use strict";
   oracledb.getConnection(connectionInfo,
-   await function (err, connection) {
+    await function (err, connection) {
       if (err) {
-        res.set('Content-Type', 'application/json');
+        res.set('Content-Type', 'x-www-form-urlencoded');
         res.status(500).send(JSON.stringify({
           status: 500,
           message: "Error connection to DB",
@@ -29,7 +29,7 @@ module.exports.usersGetAll = async function (req, res) {
         // Outputs a oracledb object
         function (err, result) {
           if (err) {
-            res.set('Content-Type', 'application/json');
+            res.set('Content-Type', 'x-www-form-urlencoded');
             res.status(500).send(JSON.stringify({
               status: 500,
               message: "Error getting user profiles",
@@ -38,7 +38,7 @@ module.exports.usersGetAll = async function (req, res) {
             return;
           }
           else {
-            res.contentType('application/json').status(200);
+            res.contentType('x-www-form-urlencoded').status(200);
             res.send(JSON.stringify(result.rows));
           }
           connection.release((err) => {
@@ -54,14 +54,24 @@ module.exports.usersGetAll = async function (req, res) {
 
 
 };
-
-module.exports.usersGetOne = function (req, res) {
-  "use strict"
-
+//Authenticate User
+module.exports.userAuth = function (req, res) {
+  "use strict";
+  console.log(req.body.PASSWORD);
+  console.log(req.body.USER_ID);
+  console.log(req.get('Content-Type'));
+  if ("application/x-www-form-urlencoded" !== req.get('Content-Type')) {
+    res.set('Content-Type', 'x-www-form-urlencoded').status(415).send(JSON.stringify({
+      status: 415,
+      message: "Wrong content type. Only x-www-form-urlencoded is supported",
+      detailed_message: null,
+    }));
+    return;
+  }//pot@go.com sdfghsdgsd
   oracledb.getConnection(connectionInfo,
     function (err, connection) {
       if (err) {
-        res.set('Content-Type', 'application/json');
+        res.set('Content-Type', 'json');
         res.status(500).send(JSON.stringify({
           status: 500,
           message: "Error connection to DB",
@@ -69,19 +79,33 @@ module.exports.usersGetOne = function (req, res) {
         }));
         return;
       }
-      connection.execute("SELECT * FROM USERS WHERE USER_NAME = :USER_NAME", [req.params.USER_NAME], {
+      connection.execute("SELECT * FROM KS_USER WHERE USER_ID = :USER_ID", [req.body.USER_ID], {
+
           outFormat: oracledb.ARRAY
         }, function (err, result) {
-          if (err || result.rows.lenth < 1) {
-            res.set('Content-Type', 'application/jason');
+        console.log(result.rows);
+          if (err || result.rows.length < 1) {
+            res.set('Content-Type', 'application/json');
             let status = err ? 500 : 404;
             res.status(status).send(JSON.stringify({
               status: status,
               message: err ? "ERROR GETING THE USER PROFILE" : "USER DOESNT EXIST",
               detailed_message: err ? err.message : ""
             }));
+          } else if (!bcrypt.compareSync(req.body.PASSWORD,result.rows[0][1] )) {
+
+            return res.status(401).json({
+              title: 'Login failed',
+              error: {message: 'Invalid login credentials'}
+            });
           } else {
-            res.contentType('application/json').status(200).send(JSON.stringify(result.row));
+            let token = jwt.sign({USER_ID: req.body.USER_ID}, 'secret', {expiresIn: 7200});
+            res.contentType('application/json').status(200).send(JSON.stringify({
+                message: 'You are logged in',
+                token: token,
+                user_id: req.body.USER_ID
+              })
+            );
           }
           connection.release((err) => {
             if (err) {
@@ -95,18 +119,18 @@ module.exports.usersGetOne = function (req, res) {
 
     })
 };
-
+//Remove user
 module.exports.userDelete = function (req, res) {
-  "use strict"
+  "use strict";
   oracledb.getConnection(connectionInfo,
     function (err, connection) {
 
 
     })
 };
-
+//Edit user details
 module.exports.userEdit = function (req, res) {
-  "use strict"
+  "use strict";
   if ("application/json" !== req.get('Content-Type')) {
     res.set('Content-Type', 'application/json').status(415).send(JSON.stringify({
       status: 415,
@@ -121,19 +145,21 @@ module.exports.userEdit = function (req, res) {
 
     })
 };
+//Register New User
 module.exports.userRegister = async function (req, res) {
 
   req.body.PASSWORD = bcrypt.hashSync(req.body.PASSWORD, 10);
   console.log(req.body.PASSWORD);
-  "use strict"
-  // if ("application/json" !== req.get('Content-Type')) {
-  //   res.set('Content-Type', 'application/json').status(415).send(JSON.stringify({
-  //     status: 415,
-  //     message: "Wrong content type. Only application/json is supported",
-  //     detailed_message: null,
-  //   }));
-  //   return;
-  // }
+  console.log(req.get('Content-Type'));
+  "use strict";
+  if ("application/x-www-form-urlencoded" !== req.get('Content-Type')) {
+    res.set('Content-Type', 'application/json').status(415).send(JSON.stringify({
+      status: 415,
+      message: "Wrong content type. Only application/json is supported",
+      detailed_message: null,
+    }));
+    return;
+  }
   oracledb.getConnection(connectionInfo,
     await function (err, connection) {
       if (err) {
@@ -146,8 +172,8 @@ module.exports.userRegister = async function (req, res) {
         return;
       }
       connection.execute("INSERT INTO KS_USER VALUES " + "(:USER_ID,:PASSWORD, :COUNTRY," +
-        ":FNAME,:LNAME)", [req.body.USER_ID,req.body.PASSWORD,req.body.COUNTRY,
-        req.body.FNAME,req.body.LNAME], {
+        ":FNAME,:LNAME)", [req.body.USER_ID, req.body.PASSWORD, req.body.COUNTRY,
+          req.body.FNAME, req.body.LNAME], {
           autoCommit: true,
           outputFormat: oracledb.ARRAY
         },

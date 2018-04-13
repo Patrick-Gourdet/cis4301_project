@@ -4,18 +4,19 @@
           <!-- User enters email -->
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
+            <input type="text" id="email" [(ngModel)]="user_id" name="email" class="form-control" placeholder="Email" required autofocus>
 
           </div>
           <!-- User enters password-->
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="text" id="password" name="password" class="form-control" placeholder="Password" required>
+            <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Password" required>
           </div>
       <div class="col-xs-12 text-center">
-      <div class="button">
-      <button> <a href="popular-trends"> Sign In </a> </button>
-      </div>
+
+        <button class="btn-success btn-lg" (click)="signIn()">Sign Me Up</button>
+      <a href="#/signup"> Sign up </a>
+
       </div>
     </div>
   </div>

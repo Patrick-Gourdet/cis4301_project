@@ -15,8 +15,8 @@ router
   .get(userCtrl.usersGetAll);
 
 router
-  .route('/profiles/:USER_NAME')
-  .get(userCtrl.usersGetOne);
+  .route('/profile-signin')
+  .post(userCtrl.userAuth);
 
 router
   .route('/add-profile')
