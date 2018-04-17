@@ -10,20 +10,23 @@
 <div class="topnav">
   <a class="active" href="#/home">Kick Starter Analyzer</a>
 <!-- these will not be shown until the user in logged into their account -->
-    <a href="#/popular-trends">Popular Trends</a>
-    <a href="#/search-trends">Search Trends</a>
-    <a href="#/history"> History</a>
-  <a href="help"> Help</a>
+    <a href="#/auth/popular-trends" *ngIf="loggedIn()">Popular Trends</a>
+    <a href="#/auth/search-trends" *ngIf="loggedIn()">Search Trends</a>
+    <a href="#/auth/history" *ngIf="loggedIn()"> History</a>
+  <a href="#/help"> Help</a>
 
   <ul>
     <!-- these will not be shown once the user is logged in -->
 
-
-    <li style=" float:right"><a href="/auth/signin"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+    <!--[routerLink]="['signin']"-->
+    <li routerLinkActive="active" *ngIf="!loggedIn()" style=" float:right" >
+      <a href='#/auth/signin'>
+      <span class="glyphicon glyphicon-log-in"></span> Sign In</a>
+    </li>
     <!-- will add sign out button with ng-if user==signed in or something similar -->
-    <li style=" float:right"><a href="#/signout"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+    <li style=" float:right" *ngIf="loggedIn()"><button (click)="logOut()"><span class="glyphicon glyphicon-log-out"></span> Sign Out</button></li>
     <!-- will add profile button with ng-if user==signed in or something similar -->
-    <li style=" float:right"><a href="#/profile">Profile</a></li>
+    <li style=" float:right" *ngIf="loggedIn()"><a href="#/auth/profile">Profile</a></li>
 
   </ul>
 </div>

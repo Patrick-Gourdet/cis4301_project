@@ -11,21 +11,16 @@ import { SigninComponent } from './users/signin/signin.component';
 import { SignupComponent } from './users/signup/signup.component';
 import { PopulartrendsComponent } from './populartrends/populartrends.component';
 import { HttpModule } from '@angular/http';
-// import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './users/profile/profile.component';
 import { HelpComponent } from './help/help.component';
-import { AuthenticationComponent } from "./users/authentication.component";
 import { AuthService } from "./users/auth.service";
 import { AUTH_ROUTES } from "./users/auth.routes";
+import { FooterComponent } from './footer/footer.component';
 const appRoutes: Routes=[
 
   {path: 'home', component: HomeComponent},
-
-  // {path: 'signin', component: SigninComponent},
-  // {path: 'signup', component: SignupComponent},
-  {path: 'popular-trends', component: PopulartrendsComponent},
-  // {path: 'profile', component: ProfileComponent},
   {path: 'help', component: HelpComponent},
-  { path: 'auth', component: AuthenticationComponent, children: AUTH_ROUTES },
+  { path: 'auth', children: AUTH_ROUTES },
   {path: '', redirectTo: '/home',pathMatch: 'full'}
 ]
 @NgModule({
@@ -33,13 +28,13 @@ const appRoutes: Routes=[
     AppComponent,
     UsersComponent,
     HomeComponent,
-    AuthenticationComponent,
     HeaderComponent,
     SigninComponent,
     SignupComponent,
     PopulartrendsComponent,
-    // ProfileComponent,
-    HelpComponent
+    ProfileComponent,
+    HelpComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

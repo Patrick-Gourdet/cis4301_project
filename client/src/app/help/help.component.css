@@ -1,16 +1,24 @@
 .background {
-  background-color: #C0C0C0;
+  background: radial-gradient(circle, white , darkgray );
   color: black;
   position: relative;
   bottom: 0px;
   right: 0px;
-  height: 2000px;
+
 }
-.button{
-  color: #4CAF50;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+img{
+
+  max-height: 250px;
+  max-width: 250px;
+}
+.pad{
+  padding-left: 50px;
+  padding-top: 50px;
+  color: white;
+  text-shadow:1px 1px 1px #939393;
+}
+.back{
+  background: url("../../assets/desktop-2325627_960_720.jpg") repeat fixed;
+background-size: cover;
+  height: 400px;
 }

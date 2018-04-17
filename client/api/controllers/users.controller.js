@@ -60,7 +60,7 @@ module.exports.userAuth = function (req, res) {
   console.log(req.body.PASSWORD);
   console.log(req.body.USER_ID);
   console.log(req.get('Content-Type'));
-  if ("application/x-www-form-urlencoded" !== req.get('Content-Type')) {
+  if ("application/json" !== req.get('Content-Type')) {
     res.set('Content-Type', 'x-www-form-urlencoded').status(415).send(JSON.stringify({
       status: 415,
       message: "Wrong content type. Only x-www-form-urlencoded is supported",
