@@ -16,6 +16,8 @@ import { HelpComponent } from './help/help.component';
 import { AuthService } from "./users/auth.service";
 import { AUTH_ROUTES } from "./users/auth.routes";
 import { FooterComponent } from './footer/footer.component';
+import {AuthGuard} from "./users/auth.guard";
+
 const appRoutes: Routes=[
 
   {path: 'home', component: HomeComponent},
@@ -44,7 +46,7 @@ const appRoutes: Routes=[
     RouterModule.forRoot(appRoutes
       , { useHash: true })
   ],
-  providers: [AuthService],
+  providers: [AuthGuard, AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

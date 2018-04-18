@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Http, Headers, Response,HttpModule } from "@angular/http";
+import {Router} from "@angular/router";
 import 'rxjs/Rx';
 import { Observable } from "rxjs";
 
@@ -7,7 +8,7 @@ import { User } from "./user.model";
 
 @Injectable()
 export class AuthService {
-    constructor(private http: Http) {}
+    constructor(private router:Router, private http: Http) {}
 
     signup(User1) {
         const body = JSON.stringify(User1);
@@ -28,6 +29,8 @@ export class AuthService {
 
     logout() {
         localStorage.clear();
+
+      this.router.navigate(['/']);
     }
 
     isLoggedIn() {
