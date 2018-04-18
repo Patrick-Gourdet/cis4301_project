@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5222dbce-83d7-4531-97ba-f8b5b0fdf350" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/gulpfile1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/app/users/profile/profile.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/app/users/profile/profile.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/app/users/profile/profile.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/app/users/profile/profile.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/graph-6.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/presentation-4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/src/assets/stuff-bg.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/client/.angular-cli.json" afterPath="$PROJECT_DIR$/client/.angular-cli.json" />
       <change beforePath="$PROJECT_DIR$/client/api/controllers/users.controller.js" afterPath="$PROJECT_DIR$/client/api/controllers/users.controller.js" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" afterPath="$PROJECT_DIR$/client/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.html" afterPath="$PROJECT_DIR$/client/src/app/app.component.html" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/header/header.component.html" afterPath="$PROJECT_DIR$/client/src/app/header/header.component.html" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/header/header.component.ts" afterPath="$PROJECT_DIR$/client/src/app/header/header.component.ts" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/help/help.component.css" afterPath="$PROJECT_DIR$/client/src/app/help/help.component.css" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/help/help.component.html" afterPath="$PROJECT_DIR$/client/src/app/help/help.component.html" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/home/home.component.html" afterPath="$PROJECT_DIR$/client/src/app/home/home.component.html" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/users/auth.routes.ts" afterPath="$PROJECT_DIR$/client/src/app/users/auth.routes.ts" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/users/authentication.component.ts" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/users/signin/signin.component.html" afterPath="$PROJECT_DIR$/client/src/app/users/signin/signin.component.html" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/users/signin/signin.component.ts" afterPath="$PROJECT_DIR$/client/src/app/users/signin/signin.component.ts" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/users/signup/signup.component.ts" afterPath="$PROJECT_DIR$/client/src/app/users/signup/signup.component.ts" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/top.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/populartrends/populartrends.component.css" afterPath="$PROJECT_DIR$/client/src/app/populartrends/populartrends.component.css" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/users/profile/profile.component.css" afterPath="$PROJECT_DIR$/client/src/app/users/profile/profile.component.css" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/users/signin/signin.component.css" afterPath="$PROJECT_DIR$/client/src/app/users/signin/signin.component.css" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/users/signup/signup.component.css" afterPath="$PROJECT_DIR$/client/src/app/users/signup/signup.component.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,31 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="signin.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/users/signin/signin.component.html">
+      <file leaf-file-name="help.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/help/help.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            <state relative-caret-position="187">
+              <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signin.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/users/signin/signin.component.ts">
+      <file leaf-file-name="signup.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/users/signup/signup.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="help.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/help/help.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+            <state relative-caret-position="153">
+              <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -84,57 +54,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.component.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/help/help.component.css">
+      <file leaf-file-name="users.controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/api/controllers/users.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="-410">
+              <caret line="154" column="23" lean-forward="false" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/footer/footer.component.html">
+      <file leaf-file-name="populartrends.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/populartrends/populartrends.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-              <folding>
-                <element signature="e#576#582#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.component.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/app/footer/footer.component.css">
+      <file leaf-file-name="profile.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/users/profile/profile.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="73" column="1" lean-forward="false" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+            <state relative-caret-position="102">
+              <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="desktop-2325627_960_720.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/assets/desktop-2325627_960_720.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="signin.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/users/signin/signin.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/help/help.component.ts">
+      <file leaf-file-name="signup.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/users/signup/signup.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/users/users/users.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/app/app.component.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -182,7 +163,6 @@
         <option value="$PROJECT_DIR$/client/src/index.html" />
         <option value="$PROJECT_DIR$/client/src/app/signup/signup.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/signup/signup.component.ts" />
-        <option value="$PROJECT_DIR$/client/src/app/home/home.component.css" />
         <option value="$PROJECT_DIR$/client/src/app/signup/signup.component.css" />
         <option value="$PROJECT_DIR$/client/src/app/header/header.component.css" />
         <option value="$PROJECT_DIR$/client/src/app/signin/signin.component.ts" />
@@ -192,7 +172,6 @@
         <option value="$PROJECT_DIR$/client/app.js" />
         <option value="$PROJECT_DIR$/client/api/routes/index.js" />
         <option value="$PROJECT_DIR$/client/src/app/users/authentication.component.ts" />
-        <option value="$PROJECT_DIR$/client/api/controllers/users.controller.js" />
         <option value="$PROJECT_DIR$/client/src/app/users/auth.service.ts" />
         <option value="$PROJECT_DIR$/client/src/app/header/header.component.ts" />
         <option value="$PROJECT_DIR$/client/src/app/users/profile/profile.component.ts" />
@@ -208,10 +187,17 @@
         <option value="$PROJECT_DIR$/client/dist/main.js" />
         <option value="$PROJECT_DIR$/client/dist/index.html" />
         <option value="$PROJECT_DIR$/client/src/app/help/help.component.html" />
-        <option value="$PROJECT_DIR$/client/src/app/help/help.component.css" />
         <option value="$PROJECT_DIR$/client/src/app/footer/footer.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/footer/footer.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/app.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/users/signin/signin.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/users/profile/profile.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/users/signup/signup.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/populartrends/populartrends.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/home/home.component.css" />
+        <option value="$PROJECT_DIR$/client/src/app/help/help.component.css" />
+        <option value="$PROJECT_DIR$/client/api/controllers/users.controller.js" />
       </list>
     </option>
   </component>
@@ -261,6 +247,19 @@
               <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -277,6 +276,74 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="footer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="help" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="populartrends" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="signin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="signup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cis4301_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cis4301_project" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -338,7 +405,7 @@
       <workItem from="1523097982387" duration="10873000" />
       <workItem from="1523362930307" duration="6822000" />
       <workItem from="1523452905477" duration="91449000" />
-      <workItem from="1523997143495" duration="10171000" />
+      <workItem from="1523997143495" duration="11660000" />
     </task>
     <task id="LOCAL-00001" summary="Still at it configuring user to_date">
       <created>1523445803261</created>
@@ -375,11 +442,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523595782589</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Login works help page ruff design basic footer.">
+      <created>1524008521138</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1524008521139</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173492000" />
+    <option name="totallyTimeSpent" value="174981000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,7 +520,8 @@
     <MESSAGE value="Signup is working need to set the auth paths" />
     <MESSAGE value="changes in home page" />
     <MESSAGE value="I cant even begin to expolain what is gong on. Routing to auth can now log in sign up route is still off if you still want to use it just comment it back in to the app modul .ts and comment it out in the authentication services. I moved the sign in  and out to the user folder. Annnnnndddd we need to make an even so that the header can listen so it has access to the tokens." />
-    <option name="LAST_COMMIT_MESSAGE" value="I cant even begin to expolain what is gong on. Routing to auth can now log in sign up route is still off if you still want to use it just comment it back in to the app modul .ts and comment it out in the authentication services. I moved the sign in  and out to the user folder. Annnnnndddd we need to make an even so that the header can listen so it has access to the tokens." />
+    <MESSAGE value="Login works help page ruff design basic footer." />
+    <option name="LAST_COMMIT_MESSAGE" value="Login works help page ruff design basic footer." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -462,21 +537,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/dist/favicon1.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/dist/favicon1.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/favicon1.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/populartrends/populartrends.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -492,25 +552,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/app.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/header/header.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/users/signup/signup.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -535,14 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/users/signin/signin.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -653,29 +690,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/api/controllers/users.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="62" column="23" lean-forward="false" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/users/auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="22" column="70" lean-forward="false" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/users/signup/signup.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#50#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,14 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/home/home.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -815,20 +826,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/app/help/help.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/footer/footer.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
-            <element signature="e#576#582#0" expanded="true" />
+            <element signature="e#576#582#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -843,8 +846,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/footer/footer.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="73" column="1" lean-forward="false" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/users/signin/signin.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/users/profile/profile.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/users/users/users.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/users/signup/signup.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/populartrends/populartrends.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/home/home.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/help/help.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/app/users/signup/signup.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/api/controllers/users.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-410">
+          <caret line="154" column="23" lean-forward="false" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
           <folding />
         </state>
       </provider>

@@ -152,7 +152,7 @@ module.exports.userRegister = async function (req, res) {
   console.log(req.body.PASSWORD);
   console.log(req.get('Content-Type'));
   "use strict";
-  if ("application/x-www-form-urlencoded" !== req.get('Content-Type')) {
+  if ("application/json" !== req.get('Content-Type')) {
     res.set('Content-Type', 'application/json').status(415).send(JSON.stringify({
       status: 415,
       message: "Wrong content type. Only application/json is supported",
