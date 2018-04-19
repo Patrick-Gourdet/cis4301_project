@@ -6,11 +6,14 @@
   right: 0px;
   height: 700px;
 }
-.button{
-  color: #4CAF50;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+.userInfo{
+  color: #000000;
+  text-shadow:1px 1px 1px #a7a7a7;
+  font-size: 18px;
+  padding: 50px 0px 0px 50px;
+  font-family: Helvetica;
+}
+border{
+  height: 152px;
+  width: 152px;
 }

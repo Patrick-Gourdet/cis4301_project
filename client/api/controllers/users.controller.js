@@ -14,7 +14,7 @@ module.exports.usersGetAll = async function (req, res) {
   oracledb.getConnection(connectionInfo,
     await function (err, connection) {
       if (err) {
-        res.set('Content-Type', 'x-www-form-urlencoded');
+        res.set('Content-Type', 'json');
         res.status(500).send(JSON.stringify({
           status: 500,
           message: "Error connection to DB",
@@ -38,7 +38,7 @@ module.exports.usersGetAll = async function (req, res) {
             return;
           }
           else {
-            res.contentType('x-www-form-urlencoded').status(200);
+            res.contentType('json').status(200);
             res.send(JSON.stringify(result.rows));
           }
           connection.release((err) => {
@@ -72,11 +72,11 @@ module.exports.userAuth = function (req, res) {
     function (err, connection) {
       if (err) {
         res.set('Content-Type', 'json');
-        res.status(500).send(JSON.stringify({
+        res.status(500).send({
           status: 500,
           message: "Error connection to DB",
           details: err.message
-        }));
+        });
         return;
       }
       connection.execute("SELECT * FROM KS_USER WHERE USER_ID = :USER_ID", [req.body.USER_ID], {
@@ -100,13 +100,64 @@ module.exports.userAuth = function (req, res) {
             });
           } else {
             let token = jwt.sign({USER_ID: req.body.USER_ID}, 'secret', {expiresIn: 7200});
-            res.contentType('application/json').status(200).send(JSON.stringify({
+            res.contentType('application/json').status(200).send({
                 message: 'You are logged in',
                 token: token,
-                user_id: req.body.USER_ID
-              })
+                user_id: result.rows[0][0]
+              }
             );
           }
+          connection.release((err) => {
+            if (err) {
+              console.log(err.message);
+            } else {
+              console.log("GET ONE USER/profiels : Connection Released");
+            }
+          })
+        }
+      )
+
+    })
+};
+//Authenticate User
+module.exports.getUser = function (req, res) {
+  "use strict";
+
+  console.log(req.body.USER_ID);
+  if ("application/json" !== req.get('Content-Type')) {
+    res.set('Content-Type', 'x-www-form-urlencoded').status(415).send(JSON.stringify({
+      status: 415,
+      message: "Wrong content type. Only x-www-form-urlencoded is supported",
+      detailed_message: null,
+    }));
+    return;
+  }
+  oracledb.getConnection(connectionInfo,
+    function (err, connection) {
+      if (err) {
+        res.set('Content-Type', 'json');
+        res.status(500).send({
+          status: 500,
+          message: "Error connection to DB",
+          details: err.message
+        });
+        return;
+      }
+      connection.execute("SELECT * FROM KS_USER WHERE USER_ID = :USER_ID", [req.body.USER_ID], {
+
+          outFormat: oracledb.ARRAY
+        }, function (err, result) {
+          console.log(result.rows);
+          if (err || result.rows.length < 1) {
+            res.set('Content-Type', 'application/json');
+            let status = err ? 500 : 404;
+            res.status(status).send(JSON.stringify({
+              status: status,
+              message: err ? "ERROR GETING THE USER PROFILE" : "USER DOESNT EXIST",
+              detailed_message: err ? err.message : ""
+            }));
+          } else {
+            res.send(JSON.stringify(result.rows));          }
           connection.release((err) => {
             if (err) {
               console.log(err.message);
@@ -132,11 +183,11 @@ module.exports.userDelete = function (req, res) {
 module.exports.userEdit = function (req, res) {
   "use strict";
   if ("application/json" !== req.get('Content-Type')) {
-    res.set('Content-Type', 'application/json').status(415).send(JSON.stringify({
+    res.set('Content-Type', 'application/json').status(415).send({
       status: 415,
       message: "Wong content-type . Only applicaton/json is supported",
       detailed_message: null,
-    }));
+    });
     return;
   }
   oracledb.getConnection(connectionInfo,

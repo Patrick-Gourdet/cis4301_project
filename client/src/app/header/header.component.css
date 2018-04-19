@@ -4,7 +4,9 @@
   background-color: #333;
   overflow: hidden;
 }
-
+.point{
+  cursor: pointer;
+}
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;

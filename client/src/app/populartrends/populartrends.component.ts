@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-populartrends',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./populartrends.component.css']
 })
 export class PopulartrendsComponent implements OnInit {
-
-  constructor() { }
+projects: any;
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
-
+  getProjects(){
+    this.http.get('api/kickstarter-projects').subscribe(data => {
+      this.projects = data;
+    })
+  }
 }

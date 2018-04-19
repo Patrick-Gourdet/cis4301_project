@@ -1,21 +1,20 @@
 <div class="background">
-  <h3 class="col-xs-12 text-center">Update your profile</h3>
-  <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
-    <!-- User enters email -->
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="text" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
+<div class="row">
+  <!--<h3 class="col-xs-12 text-center">Update your profile</h3>-->
+  <div class="col-xs-4  col-md-4 userInfo">
 
-    </div>
-    <!-- User enters password-->
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="text" id="password" name="password" class="form-control" placeholder="Password" required>
-    </div>
-    <div class="col-xs-12 text-center">
-      <div class="button">
-        <button> <a href="popular-trends"> Update </a> </button>
-      </div>
-    </div>
+    <span class="border border-white"><div style="background-color:white; color: #4CAF50; font-size: 150px" class="glyphicon glyphicon-user"></div></span>
+    <p class="un">User Name: {{message[0][0]}}</p>
+      <hr>
+      <p>First Name: {{message[0][3]}}</p>
+      <hr>
+      <p>Last Name: {{message[0][4]}}</p>
+      <hr>
   </div>
+    <div class=" col-xs-6  col-md-6">
+      <app-populartrends></app-populartrends>
+    </div>
+
+
+</div>
 </div>

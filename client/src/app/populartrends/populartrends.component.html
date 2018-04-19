@@ -1,3 +1,19 @@
-<p>
-  popular Trends works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <h1> popular Trends works!</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success btn-lg" (click)="getProjects()">Get Projects</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div *ngFor="let i of projects">{{i[0]}}</div>
+  </div>
+</div>
+
+
+
+

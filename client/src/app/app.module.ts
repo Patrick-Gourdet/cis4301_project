@@ -44,7 +44,7 @@ const appRoutes: Routes=[
     HttpClientModule,
     HttpModule,
     RouterModule.forRoot(appRoutes
-      , { useHash: true })
+      , { useHash: true,onSameUrlNavigation: 'reload' })
   ],
   providers: [AuthGuard, AuthService ],
   bootstrap: [AppComponent]
