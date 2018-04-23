@@ -12,6 +12,7 @@ oracledb.outFormat = oracledb.ARRAY;
 
 module.exports.KSprojects = async function (req, res) {
   "use strict";
+
   oracledb.getConnection(connectionInfo,
     await function (err, connection) {
       if (err) {
@@ -26,19 +27,19 @@ module.exports.KSprojects = async function (req, res) {
       let offset1 = 0;
       let maxRows1 = 20;
       connection.execute(
-        'SELECT * FROM PROJECT OFFSET :offset ROWS FETCH NEXT :maxRows ROWS ONLY',
-        {offset: offset1, maxRows: maxRows1}, {
+        'SELECT * FROM PROJECT , FINANCED',
+        {}, {
           outFormat: oracledb.ARRAY
         },
         // Outputs a ARRAY
         function (err, result) {
           if (err) {
-            res.set('Content-Type', 'x-www-form-urlencoded');
-            res.status(500).send(JSON.stringify({
+            res.set('Content-Type', 'json');
+            res.status(500).send({
               status: 500,
               message: "Error getting user profiles",
               details: err.message
-            }));
+            });
             return;
           }
           else {

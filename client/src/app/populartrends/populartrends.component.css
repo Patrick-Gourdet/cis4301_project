@@ -4,5 +4,11 @@
   position: relative;
   bottom: 0px;
   right: 0px;
-  height: 1000px;
+  height: 1500px;
+}
+h3{
+  font-size: 20px;
+}
+hr{
+  padding: 0px
 }

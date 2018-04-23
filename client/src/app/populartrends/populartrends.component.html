@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <h1> popular Trends works!</h1>
+    <h1> Popular Trends</h1>
   </div>
 </div>
 <div class="row">
@@ -9,8 +9,21 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-12">
-    <div *ngFor="let i of projects">{{i[0]}}</div>
+  <div class="col-xs-4">
+    <div *ngFor="let i of projects">Project ID:{{i[0]}}
+    <hr>
+      Project Name:{{i[1]}}
+      <hr>
+      Project start date: {{i[2]}} End Date: {{i[3]}}
+      <hr>
+     NR of investors:{{i[8]}}
+      <hr>
+      Amount raised: {{i[10]}}</div>
+
+    <!--Div that will hold the pie chart-->
+  <div id="chart_div"></div>
+
+
   </div>
 </div>
 

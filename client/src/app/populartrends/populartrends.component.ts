@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-
+// import {pie} from "../../assets/pie.js";
 @Component({
   selector: 'app-populartrends',
   templateUrl: './populartrends.component.html',
