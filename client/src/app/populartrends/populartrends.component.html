@@ -1,31 +1,87 @@
-<div class="row">
+<div class="row ">
   <div class="col-xs-12">
     <h1> Popular Trends</h1>
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-12">
-    <button class="btn btn-success btn-lg" (click)="getProjects()">Get Projects</button>
+  <div class="col-xs-12 ">
+    <button class="btn btn-success btn-lg bp" (click)="getProjects()">Get Projects</button>
   </div>
+  <hr>
 </div>
 <div class="row">
   <div class="col-xs-4">
-    <div *ngFor="let i of projects">Project ID:{{i[0]}}
-    <hr>
-      Project Name:{{i[1]}}
-      <hr>
-      Project start date: {{i[2]}} End Date: {{i[3]}}
-      <hr>
-     NR of investors:{{i[8]}}
-      <hr>
-      Amount raised: {{i[10]}}</div>
+   <h3 *ngIf="total">Total # projects in 7 years {{projects[0][0]}}</h3>
 
-    <!--Div that will hold the pie chart-->
-  <div id="chart_div"></div>
 
 
   </div>
 </div>
+<hr class="style-five">
+<div class="row"><div class="col-xs-12"><h3>The pie-chart holds the truth.</h3></div></div>
+  <div class="row">
+    <div class="col-xs-6 ">
+      <button class="btn1" (click)="getPercents()"></button>
+    </div>
+    <div *ngFor="let i of percent">Success:{{i[0]}}
+      <hr>
+      Failed:{{i[1]}}
+      <hr>
+      Cancelled: {{i[2]}}</div>
+
+    <div class="col-xs-6 ">
+      <button class="btn btn-success btn-lg " (click)="showGraph()">Show Graph</button>
+    </div>
+    <hr class="style-five">
+    <div class="my" *ngIf="show" id="pie_chart" [chartData]="pie_ChartData" [chartOptions] = "pie_ChartOptions"
+         chartType="PieChart" GoogleChart></div>
+  </div>
+<hr class="style-five">
+<div class="row"><div class="col-xs-12"><h3>See how many projects have already been started.</h3></div></div>
+  <div class="row">
+
+
+    <div class="col-xs-6 bp">
+      <button class="btn1" (click)="getTimeLine()"></button>
+    </div>
+    <div class="col-xs-6 bp">
+      <button class="btn btn-success btn-lg" (click)="showLineGraph()">Show Starters</button>
+    </div>
+    <hr class="style-five">
+    <div class="my" *ngIf="showLine" id="line_chart" [chartData]="line_ChartData" [chartOptions] = "line_ChartOptions"
+         chartType="LineChart" GoogleChart>
+
+    </div>
+  </div>
+<hr class="style-five">
+<div class="row"><div class="col-xs-12"><h3>See how the success rates compare from past to present.</h3></div></div>
+  <div class="row">
+    <div class="col-xs-6 bp">
+      <button class="btn1" (click)="getTimeLineSFC()"></button>
+    </div>
+    <div class="col-xs-6 bp">
+      <button class="btn btn-success btn-lg" (click)="showLineGraphTime()">Compare Outcomes</button>
+    </div>
+    <hr class="style-five">
+    <div class="my" *ngIf="showLineSFC" id="line_chartSFC" [chartData]="line_ChartDataSFC" [chartOptions] = "line_ChartOptionsSFC"
+         chartType="LineChart" GoogleChart></div>
+  </div>
+
+<hr class="style-five">
+<div class="row"><div class="col-xs-12"><h3>Compare top funded projects.</h3></div></div>
+<div class="row">
+  <div class="col-xs-6 bp">
+    <button class="btn1" (click)="getTopCat()"></button>
+  </div>
+  <div class="col-xs-6 bp">
+    <button class="btn btn-success btn-lg" (click)="showBarChart()">Top Categories</button>
+  </div>
+  <hr class="style-five">
+  <div class="my" *ngIf="showBar" id="bar_chartSFC" [chartData]="bar_ChartData" [chartOptions] = "bar_ChartOptions"
+       chartType="BarChart" GoogleChart></div>
+</div>
+
+
 
 
 

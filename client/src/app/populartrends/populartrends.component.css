@@ -4,7 +4,7 @@
   position: relative;
   bottom: 0px;
   right: 0px;
-  height: 1500px;
+  min-height: 1000px;
 }
 h3{
   font-size: 20px;
@@ -12,3 +12,42 @@ h3{
 hr{
   padding: 0px
 }
+bp{
+  padding: 20px;
+}
+hr.style-five {
+  border: 0;
+  height: 0; /* Firefox... */
+  box-shadow: 0 0 10px 1px black;
+}
+hr.style-five:after {  /* Not really supposed to work, but does */
+  content: "\00a0";  /* Prevent margin collapse */
+}
+
+.my
+{
+
+  color:#000000;
+  border: 3px solid #dee0e2;
+  box-shadow: 2px 2px #b7b9bb;
+
+}
+.btn1 {
+  background: #92c7eb;
+  background-image: url('http://res.freestockphotos.biz/pictures/15/15104-illustration-of-a-green-power-button-icon-pv.png');
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  border: none;
+  padding: 20px;
+  width: 70px;
+  border-radius: 900px;
+  height: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  }
+  .btn1:hover
+  {
+  width: 75px;
+  height: 75px;
+  }

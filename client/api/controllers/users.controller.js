@@ -8,7 +8,7 @@ let oracledb = require('oracledb');
 let bcrypt = require('bcrypt');
  let jwt = require('jsonwebtoken');
 oracledb.outFormat = oracledb.ARRAY;
-//GET ALL LISTED USERS
+//GET some projects
 module.exports.usersGetAll = async function (req, res) {
   "use strict";
   oracledb.getConnection(connectionInfo,

@@ -17,6 +17,7 @@ import { AuthService } from "./users/auth.service";
 import { AUTH_ROUTES } from "./users/auth.routes";
 import { FooterComponent } from './footer/footer.component';
 import {AuthGuard} from "./users/auth.guard";
+import { GoogleChartComponent } from './google-chart/google-chart.component';
 
 const appRoutes: Routes=[
 
@@ -36,7 +37,8 @@ const appRoutes: Routes=[
     PopulartrendsComponent,
     ProfileComponent,
     HelpComponent,
-    FooterComponent
+    FooterComponent,
+    GoogleChartComponent
   ],
   imports: [
     BrowserModule,

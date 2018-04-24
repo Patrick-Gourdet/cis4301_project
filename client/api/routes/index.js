@@ -28,5 +28,20 @@ router
 router
   .route('/kickstarter-projects')
   .get(kickCtrl.KSprojects);
+router
+  .route('/sfc')
+  .get(kickCtrl.percentSFC);
+
+router
+  .route('/time')
+  .get(kickCtrl.overTime);
+
+router
+  .route('/sfc-time')
+  .get(kickCtrl.sfcOvertime);
+
+router
+  .route('/cat-income')
+  .get(kickCtrl.mostIncimeCat);
 
 module.exports = router;
